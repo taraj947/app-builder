@@ -1,0 +1,41 @@
+<!-- <license header> -->
+
+<!DOCTYPE html>
+<html lang="en" class="spectrum spectrum--medium spectrum--light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://unpkg.com/@spectrum-css/vars/dist/spectrum-global.css">
+  <link rel="stylesheet" href="https://unpkg.com/@spectrum-css/typography">
+  <link rel="stylesheet" href="index.css">
+  <title>Log in</title>
+  <script src="./src/login.js" type="module"></script>
+</head>
+
+<body>
+  <h1>Log in</h1>
+  <div class="spectrum--large spectrum-Typography spectrum-Site">
+    <div>
+      <form id="loginForm">
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <input type="submit" value="Log in">
+      </form>
+      <p>No account yet? <a href="./signup.html">Sign up</a></p>
+    </div>
+    <div>
+      <h2>result</h2>
+      <textarea id="taOutput" readonly spellcheck="false" style="min-height:120px;"></textarea>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!-- <license header> -->
+
+<!DOCTYPE html>
+<html lang="en" class="spectrum spectrum--medium spectrum--light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://unpkg.com/@spectrum-css/vars/dist/spectrum-global.css">
+  <link rel="stylesheet" href="https://unpkg.com/@spectrum-css/typography">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="products.css">
+  <title>Products</title>
+  <script src="./src/products.js" type="module"></script>
+</head>
+
+<body>
+  <div class="plp-topbar">
+    <h1>Products</h1>
+    <div class="plp-user">
+      <span id="userLabel"></span>
+      <button type="button" id="logoutBtn">Log out</button>
+    </div>
+  </div>
+
+  <div class="plp-filters">
+    <input type="search" id="searchInput" placeholder="Search products...">
+    <select id="categorySelect">
+      <option value="">All categories</option>
+    </select>
+    <select id="sortSelect">
+      <option value="title:asc">Title (A-Z)</option>
+      <option value="title:desc">Title (Z-A)</option>
+      <option value="price:asc">Price (low to high)</option>
+      <option value="price:desc">Price (high to low)</option>
+      <option value="rating:desc">Rating (high to low)</option>
+    </select>
+  </div>
+
+  <div id="statusEl" class="plp-status"></div>
+  <div id="gridEl" class="plp-grid"></div>
+  <div id="paginationEl" class="plp-pagination"></div>
+</body>
+
+</html>
