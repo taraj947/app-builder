@@ -17,14 +17,15 @@ async function doLogin () {
   const taOutput = document.getElementById('taOutput')
   const email = document.getElementById('email').value
   const password = document.getElementById('password').value
+  const loginButton = document.querySelector('#loginForm input[type="submit"]')
 
   const actionUrl = actions.login || actions['app builder2/login']
   if (!actionUrl) {
-    taOutput.innerHTML = 'login action is not deployed yet, run "aio app deploy"'
+    // taOutput.innerHTML = 'login action is not found'
     return
   }
 
-  taOutput.innerHTML = 'logging in ...'
+  loginButton.disabled = true
   try {
     const result = await actionWebInvoke(actionUrl, {}, { email, password })
     if (result && result.success && result.token) {
@@ -33,8 +34,11 @@ async function doLogin () {
       window.location.href = './products.html'
       return
     }
-    taOutput.innerHTML = JSON.stringify(result, 0, 2)
+    // taOutput.innerHTML = JSON.stringify(result, 0, 2)
   } catch (err) {
-    taOutput.innerHTML = err.message
+    loginButton.disabled = false
+    console.log(err.message)
+  } finally {
+    loginButton.disabled = false
   }
 }

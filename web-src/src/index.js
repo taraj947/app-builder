@@ -78,7 +78,7 @@ function safeParse (val) {
 function doSubmit () {
   const actionIndex = document.getElementById('selAction').selectedIndex || 0
   const taOutput = document.getElementById('taOutput')
-  taOutput.innerHTML = 'calling action ...'
+  // taOutput.innerHTML = 'calling action ...'
   if (actions) {
     const selAction = Object.entries(actions)[actionIndex]
     const headers = safeParse(document.getElementById('actionHeaders').value)
@@ -93,7 +93,7 @@ function doSubmit () {
         console.error('Error:', err)
         outputHTML = err.message
       }).finally(() => {
-        taOutput.innerHTML = `time:${(Date.now() - preCallTime)}ms\n\n ${outputHTML}`
+        // taOutput.innerHTML = `time:${(Date.now() - preCallTime)}ms\n\n ${outputHTML}`
       })
   }
 }

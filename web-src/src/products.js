@@ -62,7 +62,7 @@ async function loadProducts () {
 
   const actionUrl = actions['get-products'] || actions['app builder2/get-products']
   if (!actionUrl) {
-    statusEl.innerText = 'get-products action is not deployed yet, run "aio app deploy"'
+    statusEl.innerText = 'get-products action is not found'
     return
   }
 
